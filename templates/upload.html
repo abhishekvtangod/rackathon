@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Questrial&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="/static/css/upload.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Staatliches&display=swap" rel="stylesheet">  
+    
+    <title>PROtected</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  </head>
+  <body>
+    <header>
+    <!--NAVBAR SECTION -->
+   <nav class="navbar navbar-expand-lg " id ="top">
+      <a class="navbar-brand" href="/" style="font-family: 'Roboto',sans-serif;">PRO-tected</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="color:white;">
+        <span class="navbar-toggler-icon"><strong>☰</strong></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item dropdown">
+            
+
+
+            <a class="nav-link dropdown-toggle hello_world" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Services
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Shero</a>
+              <a class="dropdown-item" href="/text_audit">Text Auditor</a>
+              <a class="dropdown-item" href="/upload">Image Auditor</a>
+              <a class="dropdown-item " href="#">Bot Detection</a>
+              <a class="dropdown-item"  href="/steg">Steganography</a>
+            </div>
+          </li>
+        </ul>
+        
+        <ul class="nav navbar-nav navbar-right">
+          <li class="nav-item "><a class="nav-link hello_world" href="#" >Signup  <i class="fa fa-user-plus hello_world"></i></a></li>
+          <li class="nav-item "><a class="nav-link hello_world" href="#about">Login  <i class="fa fa-user hello_world"></i></a></li>
+        </ul>
+
+      </div>
+    </nav>
+    
+  </header>
+
+
+    <div class="container">    
+    <h1>Handwriting Recognizer</h1>
+    <h2>by Stop Scam</h2>
+    
+    <form method=post enctype=multipart/form-data>
+      <p><input type=file name=file>
+         <input type=submit value=Upload id="btn">
+    </form>
+    <button id="indent" class="btn btn-secondary btn-rounded">Showtext</button>
+    <h1>Result:</h1>
+    {% if img_src %}
+      <img src="{{ img_src }}"">
+    {% endif %}
+    
+    {% if extracted_text %}
+      <p id="txt"> The extracted text from the image above is: <br> <b id="tx">{{ extracted_text }} </b></p>
+    
+      {% if msg %}
+      <h1>{{ msg }}</h1>
+      {% endif %}
+
+
+    {% else %}
+      The extracted text will be displayed here
+    {% endif %}
+  </div>
+
+  <footer style="margin-top: 250px;">
+    <p class="footer_txt"><strong>© Made by a_bash, 2019.</strong></p>
+  </footer>
+
+    <script>
+    document.getElementById("txt").style.display = "none";
+    document.getElementById('indent').addEventListener("click",modify);
+
+    function modify(){
+      m = document.getElementById('tx').textContent.replace(/\n/g, "<br />").replace(/\t/g, "<pre />");
+      
+      document.getElementById('tx').innerHTML = m;
+      
+      document.getElementById("txt").style.display = "block";
+    
+    }
+    
+    
+
+
+    </script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+  </body>
+</html>

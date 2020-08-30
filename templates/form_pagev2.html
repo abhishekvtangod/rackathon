@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="/static/css/form_pagev2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Staatliches&display=swap" rel="stylesheet">  
+    <link href="https://fonts.googleapis.com/css?family=Questrial&display=swap" rel="stylesheet">
+   
+    
+    <title>PROtected</title>
+  </head>
+  <body>
+    
+   <header>
+    <!--NAVBAR SECTION -->
+    <nav class="navbar navbar-expand-lg " id ="top">
+      <a class="navbar-brand" href="/" style="font-family: 'Roboto',sans-serif;">PRO-tected</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="color:white;">
+        <span class="navbar-toggler-icon"><strong>☰</strong></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item dropdown">
+            
+
+
+            <a class="nav-link dropdown-toggle hello_world" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Services
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Shero</a>
+              <a class="dropdown-item" href="/text_audit">Text Auditor</a>
+              <a class="dropdown-item" href="/upload">Image Auditor</a>
+              <a class="dropdown-item " href="#">Bot Detection</a>
+              <a class="dropdown-item"  href="/steg">Steganography</a>
+            </div>
+          </li>
+        </ul>
+        
+        <ul class="nav navbar-nav navbar-right">
+          <li class="nav-item "><a class="nav-link hello_world" href="#" >Signup  <i class="fa fa-user-plus hello_world"></i></a></li>
+          <li class="nav-item "><a class="nav-link hello_world" href="#about">Login  <i class="fa fa-user hello_world"></i></a></li>
+        </ul>
+
+      </div>
+    </nav>
+    
+  </header>
+
+
+  <!-- Form Field -->
+    <div class="row">
+      <div class="col-lg-8">
+        
+        <form class="container" action="{{ url_for('predict') }}" method="POST" > 
+            <div class="form-group from-form" id ="full">
+              <div class="card ">
+                <div class="card-header">
+                  Enter Article
+                </div>
+                <div class="card-body">
+                  <textarea name="paragraph_text" class="text-field" id="Textarea"  rows="4" placeholder="....." style="height:150px;"></textarea>
+                </div>
+              </div>
+               
+               <div class="card " style="margin-top:35px;">
+                <div class="card-header" >
+                  Select Author
+                </div>
+                <div class="card-body auth-id">
+                   <input type="number" name="auth_id" min="1" max="50" placeholder="00" id="one" style="width:100%;border:none;">
+                </div>
+              </div>
+              </div>
+             
+
+            <input type="submit" class="btn btn-primary container" id="subBut">
+        </form>
+      </form>
+      </div>
+      <div class="col-lg-4 name">
+     <blockquote ><emphasis style="font-weight: bold;">It takes 20 years to build a reputation </emphasis>and few minutes of cyber-incident to ruin it.</blockquote>
+     </div>  
+    </div>
+
+
+
+  <!-- Footer section -->
+  <footer class="footer" style="margin-top: 50px;position:fixed;">
+    <p class="footer_txt"><strong>© Made by a_bash, 2019.</strong></p>
+  </footer>
+
+  <!-- Scripts -->
+
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>

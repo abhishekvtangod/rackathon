@@ -1,0 +1,130 @@
+.navbar {margin-bottom: 50px;}
+nav
+{
+  font-family: 'Questrial',sans-serif;
+}
+.navbar-brand
+{
+  color:#fff;
+  font-weight: 500;
+  font-size: 20px;
+}
+.navbar-brand:hover
+{
+  background-color: rgba(255,255,255,0.3);
+  color: #fff ;
+  border-radius: 10px;
+}
+.content{
+    width:85%;
+    /*align-content: center;*/
+
+}
+.hello_world{
+color:#F6F7F8;
+}
+.hello_world:hover{
+background-color: rgba(255,255,255,0.3);
+  color: #fff ;
+  border-radius: 10px;
+}
+ul.nav a:hover { 
+background-color: rgba(255,255,255,0.3);
+  color: #fff !important; 
+border-radius: 10px;}
+#top
+{
+  background: #3066BE;
+  background-position: center;
+  color: white;
+}
+
+/** BODY **/
+.text-center
+{
+  font-family: 'Questrial',sans-serif;
+}
+.services
+{
+  padding-bottom: 70px;
+  padding-top: 50px;
+  margin-bottom: 160px;
+}
+.services h1
+{
+  
+  margin-bottom: 15px;
+
+}
+
+.services-box
+{
+  background-color: #b3b5b3;
+  padding:20px;
+  margin-top: 20px;
+  border-radius: 10px;
+  height:65px;
+  text-align: center;
+   font-family: 'Questrial',sans-serif;
+   width:150px;
+   margin-top:50px;
+
+}
+.abc
+{
+    padding-left: 100px;
+}
+
+.services-box .fa
+{
+  margin :0 10px;
+  font-size:20px;
+}
+.services-box span
+{
+  margin:3px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.services-box p
+{
+  font-size: 15px;
+  margin-top: 20px;
+  color:#777;
+}
+.services-box:hover
+{
+  background:rgba(48,102,190,0.8);
+  color:#fff;
+ 
+  transition:0.2s;
+}
+.services-box:hover p
+{
+  color:#fff;
+}
+.skills-bar
+{
+  width:60%;
+  margin-left:20%;
+
+}
+div .progress{
+  height:5px;
+}
+
+
+/*footer*/
+
+.footer_txt{
+    text-align: center;
+    padding: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 0;
+    background: #C1BFC0;
+    font-family: 'Staatliches', cursive;
+    color: #000;
+    font-size:15px;
+
+}

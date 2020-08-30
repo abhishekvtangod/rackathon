@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Text</title>
+</head>
+<body>
+    <form action="{{url_for('result')}}" method="POST">
+        <div class="form-group from-form" id ="full">
+            <label for="FormText" class ="heading container"><strong>Enter text</strong></label>
+            <textarea name="paragraph_text" class="form-control text-field" id="Textarea" cols="50" rows="10" placeholder="Enter article here."  ></textarea>
+            
+        </div>
+        
+        <input type="submit" class="btn btn-primary container" id="subBut">
+    </form>
+</body>
+</html>
